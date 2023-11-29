@@ -18,7 +18,9 @@
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [],
   "author": "foyzul",
@@ -43,7 +45,8 @@
     "systemjs": "0.19.40",
     "tsc": "^1.20150623.0",
     "typings": "^2.1.1",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.36",
@@ -69,5 +72,6 @@
     "typescript": "~2.1.0"
   },
   "repository": {},
-  "main": "Gulpfile.js"
+  "main": "Gulpfile.js",
+  "snyk": true
 }
